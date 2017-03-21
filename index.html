@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
-    <title>Movies App</title>
+    <title>Movies App</title>    
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -18,11 +18,16 @@
         <div ng-controller="MoviesCtrl">
             <div class="movies-header-toolbar">
                 <div class="movies-edit-panel">
+
                     <button type="button" class="btn glyphicon glyphicon-plus" ng-click="addMovie()"></button>
+
                     <button ng-show="!isDeleting" type="button" class="btn glyphicon glyphicon-trash" ng-click="deleteMovies()"></button>
+
                     <button ng-hide="!isDeleting" type="button" class="btn done-button" ng-click="doneDeleteMovies()">Done</button>
+                    
                 </div>
             </div>
+
             <div class="movies-container">
                 <li class="movie-container" ng-repeat="movie in movies track by $index">
                     <div class="movie-item" ng-click="onMovieClicked()">
