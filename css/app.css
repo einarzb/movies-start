@@ -17,6 +17,7 @@ body{
   right: 0;
   height: 100%;
   width: 100%;
+  border: 5px solid red;
   overflow: auto;
 }
 
@@ -27,6 +28,8 @@ body{
   left: 0;
   right: 0;
   height: 50px;
+  border: 5px solid blue;
+
 }
 
 .header-general > nav{
@@ -39,6 +42,7 @@ body{
   top: 50px;
   left: 0;
   right: 0;
+  border: 1px solid green;
   height: 50px;
 }
 
@@ -107,7 +111,8 @@ body{
 .movies-edit-panel{
   position: relative;
   margin-left: 60px;
-  display: inline-block;    
+  display: inline-block;
+  border: 5px solid purple;    
 }
 
 .movies-search{

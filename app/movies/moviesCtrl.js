@@ -1,5 +1,5 @@
 app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
-  $scope.isDeleting = false;
+  $scope.isDeleting = false; //button is trashcan
 
   $scope.movies = movies.getMovies();
 
@@ -8,11 +8,11 @@ app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
   };
   
   $scope.deleteMovies = function(){
-    $scope.isDeleting = true;
+    $scope.isDeleting = true; //toggle change to "done" button
   };
   
   $scope.doneDeleteMovies = function(){
-    $scope.isDeleting = false;
+    $scope.isDeleting = false; //button is trashcan
   };
   
   $scope.deleteMovie = function(){
