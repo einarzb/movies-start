@@ -16,25 +16,30 @@
 <body>
     <div class="app-container" ng-cloak>
         <div ng-controller="MoviesCtrl">
+            <!--TOOLBAR-->
             <div class="movies-header-toolbar">
                 <div class="movies-edit-panel">
 
                     <button type="button" class="btn glyphicon glyphicon-plus" ng-click="addMovie()"></button>
 
+                    <!--! means it's false (like initialized)-->
                     <button ng-show="!isDeleting" type="button" class="btn glyphicon glyphicon-trash" ng-click="deleteMovies()"></button>
 
                     <button ng-hide="!isDeleting" type="button" class="btn done-button" ng-click="doneDeleteMovies()">Done</button>
                     
                 </div>
             </div>
-
+            <!--CONTAINER-->
             <div class="movies-container">
                 <li class="movie-container" ng-repeat="movie in movies track by $index">
                     <div class="movie-item" ng-click="onMovieClicked()">
                         <div class="movie-image-container">
-                            <img class="movie-image" ng-src="{{movie.posterImage}}" alt="film image" ng-click="deleteMovie()" />
-                            <div ng-show="isDeleting" class="movie-delete-icon glyphicon glyphicon-minus-sign delete-icon" />
-                        </div>
+
+                                <img class="movie-image" ng-src="{{movie.posterImage}}" alt="film image" />
+                                <button ng-show="isDeleting" class="movie-delete-icon glyphicon glyphicon-minus-sign delete-icon" ng-click="deleteMovie()">
+                                </button>
+
+                       </div>
                         <div class="movie-name">{{movie.name | uppercase}}</div>
                         <div class="movie-sub-info">
                             <div class="movie-year">{{movie.year}}</div>

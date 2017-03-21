@@ -1,5 +1,5 @@
 app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
-  $scope.isDeleting = false; //button is trashcan
+  $scope.isDeleting = false; //button is trashcan 
 
   $scope.movies = movies.getMovies();
 
@@ -8,7 +8,7 @@ app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
   };
   
   $scope.deleteMovies = function(){
-    $scope.isDeleting = true; //toggle change to "done" button
+    $scope.isDeleting =! $scope.isDeleting; //toggle change to "done" button
   };
   
   $scope.doneDeleteMovies = function(){
@@ -16,6 +16,8 @@ app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
   };
   
   $scope.deleteMovie = function(){
+    console.log("im in delete mode");
     // TODO: delete the movie only if the app is in "delete mode"
   };
  }]);
+
