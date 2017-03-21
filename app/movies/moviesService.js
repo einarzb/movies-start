@@ -1,4 +1,5 @@
 app.factory('movies', [function() {
+  //movies is an array of movie objects
   var movies = [{
     id: 0,
     name: "inglorious basterds",

@@ -31,29 +31,28 @@
             </div>
             <!--CONTAINER-->
             <div class="movies-container">
+                <!--array of movie in movies-->
                 <li class="movie-container" ng-repeat="movie in movies track by $index">
                     <div class="movie-item" ng-click="onMovieClicked()">
                         <div class="movie-image-container">
-
                                 <img class="movie-image" ng-src="{{movie.posterImage}}" alt="film image" />
                                 <button ng-show="isDeleting" class="movie-delete-icon glyphicon glyphicon-minus-sign delete-icon" ng-click="deleteMovie()">
                                 </button>
-
-                       </div>
+                        </div>
+                        <!--the movie object is being definded on the fly-->
                         <div class="movie-name">{{movie.name | uppercase}}</div>
                         <div class="movie-sub-info">
                             <div class="movie-year">{{movie.year}}</div>
                             <div class="movie-resolutions">
+                                <!--array of object's property-->
                                 <span ng-repeat="res in movie.supportedResolution track by $index">{{res}}p</span>
                             </div>
-                        </div>
-                    </div>
+                        </div><!--end movie sub info-->
+                    </div><!--end movie item-->
                 </li>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+            </div><!--end container-->
+        </div><!--end ctrler-->
+    </div><!--end app container-->
     <!--load scripts-->
     <script type="text/javascript" src="node_modules/angular/angular.js"></script>
     <script type="text/javascript" src="app/app.js"></script>

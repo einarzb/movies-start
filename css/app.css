@@ -103,6 +103,7 @@ body{
 
 .movie-resolutions{
   float: right;
+  border: 5px solid orange;
 }
 
 .done-button{
