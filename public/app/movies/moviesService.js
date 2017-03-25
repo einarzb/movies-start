@@ -31,7 +31,10 @@ app.factory('movies', [function() {
   }
 
   var removeMovie = function (index) {
-    movies.splice(index, 1);
+    console.log("im in service");
+    console.log(movies);
+    movies.splice(index, 1); 
+    console.log(movies);
   };
   
   return {
