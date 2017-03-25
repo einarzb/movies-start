@@ -1,5 +1,7 @@
 var app = angular.module('movieLibrary', [])
 
-
-//ng-cloak
-
+app.directive("movieDirective", function () {
+    return {
+      templateUrl: 'app/movies/movie.html'
+    };
+});

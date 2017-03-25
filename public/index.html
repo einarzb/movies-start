@@ -31,7 +31,11 @@
             <!--CONTAINER-->
             <div class="movies-container">
                 <!--array of movie in movies-->
-                <li class="movie-container" ng-repeat="movie in movies track by $index">
+                <li class="movie-container" style="list-style-type:none">
+                    <div movieDirective></div>
+                    <!--why dont we delete everything down?-->
+                    <!--instead of ng repeat-->
+
                     <div class="movie-item" ng-click="onMovieClicked()">
                         <div class="movie-image-container">
                             <img class="movie-image" ng-src="{{movie.posterImage}}" alt="film image" />
@@ -43,7 +47,7 @@
                         <div class="movie-sub-info">
                             <div class="movie-year">{{movie.year}}</div>
                             <div class="movie-resolutions">
-                                <!--array of object's property-->
+                                <!--array of object's property for resulation-->
                                 <span ng-repeat="res in movie.supportedResolution track by $index">{{res}}p</span>
                             </div>
                         </div>
@@ -62,6 +66,10 @@
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/movies/moviesService.js"></script>
     <script type="text/javascript" src="app/movies/moviesCtrl.js"></script>
+</body>
+
+</html>
+pt>
 </body>
 
 </html>

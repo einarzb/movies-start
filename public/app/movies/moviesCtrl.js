@@ -5,7 +5,7 @@ app.controller('MoviesCtrl', ['$scope', 'movies', function($scope, movies) {
   $scope.movies = movies.getMovies();
 //getting data from one movie
   $scope.movie = $scope.movies[0];
-  
+
   $scope.addMovie = function(){
     alert("This functionality will be available soon!");
   };
